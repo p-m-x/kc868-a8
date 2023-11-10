@@ -1,6 +1,6 @@
 {
   "name": "KC868-A8",
-  "version": "2022.2.5",
+  "version": "",
   "home_assistant_domain": "esphome",
   "new_install_skip_erase": false,
   "builds": [
@@ -8,20 +8,8 @@
       "chipFamily": "ESP32",
       "parts": [
         {
-          "path": "kc868-a8-esp32/firmware.bin",
-          "offset": 65536
-        },
-        {
-          "path": "kc868-a8-esp32/bootloader_dio_40m.bin",
-          "offset": 4096
-        },
-        {
-          "path": "kc868-a8-esp32/partitions.bin",
-          "offset": 32768
-        },
-        {
-          "path": "kc868-a8-esp32/boot_app0.bin",
-          "offset": 57344
+          "path": "kc868-a8-esp32/kc868-a8-esp32.bin",
+          "offset": 0
         }
       ]
     }
