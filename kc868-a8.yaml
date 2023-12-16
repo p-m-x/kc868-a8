@@ -34,11 +34,11 @@ i2c:
 #   mdio_pin: GPIO18
 #   clk_mode: GPIO17_OUT
 #   phy_addr: 0
-  
 wifi:
-  ap:
-    ssid: ${name}
-captive_portal:
+  ssid: xxx
+  password: xxx
+
+
 
 # Example configuration entry
 pcf8574:
@@ -47,6 +47,16 @@ pcf8574:
 
   - id: "pcf8574_hub_in_1" # for input channel 9-16
     address: 0x22
+
+remote_receiver:
+  pin: 15
+  dump: all
+  tolerance: 50%
+  filter: 250us
+  idle: 4ms
+  buffer_size: 2kb
+  # on_rc_switch:
+  
 
 # Individual outputs
 switch:
@@ -113,6 +123,16 @@ switch:
       number: 7
       mode: OUTPUT
       inverted: true
+
+
+  # - platform: adc
+  #   pin: GPIO34
+  #   name: "analog1"
+  #   update_interval: 5s
+  # - platform: adc
+  #   pin: GPIO35
+  #   name: "analog2"
+  #   update_interval: 5s
 
 binary_sensor:
   - platform: gpio
